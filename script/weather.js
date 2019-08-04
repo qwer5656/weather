@@ -1,5 +1,6 @@
 (function()
 {
+
 let header=document.getElementById("header");
 let place=[
     {
@@ -163,6 +164,9 @@ fetch(weatherurl,{method:'get'}).then(function(res)
 {
     weatherdata=res.records.location;
    
+}).then(function()
+{
+    initclick();
 });
 window.addEventListener("scroll",function()
 {
@@ -188,6 +192,39 @@ function reset()
     {
         e.classList.remove("clickmap");
     });
+}
+function initclick()
+{
+   
+    reset();
+    let name="taipei_city";
+    let target=document.querySelector("#initpath");
+    target.classList.add("clickmap");
+    
+    let filterobj=place.filter(function(el)
+    {
+        
+           return el.tag==name;
+    });
+    let weather=weatherdata.filter(function(el)
+    {
+        
+           return el.locationName==filterobj[0].place;
+    })[0];
+    let placename=weather.locationName;
+    let maxt=weather.weatherElement[4].time[0].parameter.parameterName;
+    let mint=weather.weatherElement[2].time[0].parameter.parameterName;
+    let descriptionweather=weather.weatherElement[0].time[0].parameter.parameterName;
+    let pop=weather.weatherElement[1].time[0].parameter.parameterName;
+    let popimg=weather.weatherElement[0].time[0].parameter.parameterValue;
+    popimg=popimg>=10?popimg:"0"+popimg;
+    $("#tw_place").text(placename);
+    $("#temp_max").text(maxt);
+    $("#temp_min").text(mint);
+    $("#descriptionweather").text(descriptionweather);
+    $("#pop").text(pop);
+    $("#weather_img").attr("src",`img/weather_${popimg}.png`);
+    getweekweather(placename);
 }
 function getweekweather(name)
 {
