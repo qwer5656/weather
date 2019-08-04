@@ -1,0 +1,200 @@
+*
+{
+  margin: 0;
+  padding:0;
+}
+body
+{
+    background-color: #222;
+}
+#svg2600
+{
+  height: 100vh;
+  width: 50%;
+  position: relative;
+}
+#svg2600  path
+{
+  stroke: aliceblue;
+  fill: transparent;
+}
+.clickmap
+{
+  fill: #00c1f599 !important;
+}
+#svg2600  g
+{
+  stroke: aliceblue;
+  fill: transparent;
+}
+#svg2600  path:hover,#svg2600  g:hover
+{
+  fill: #00c1f599;
+}
+.wrap
+{
+  display: flex;
+  padding:0 30px;
+  margin-top: 80px;
+}
+.wheater_tw
+{
+  width: 50%;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color:white;
+  
+}
+.wheater_tw div
+{
+  margin: 10px;
+}
+#weather_img
+{
+  width: 150px;
+  height: 150px;
+}
+#weather_news
+{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+} 
+.wheater_tw h1
+{
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.wheater_tw h3
+{
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+.logo img
+{
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+.logo
+{
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+.logo a
+{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color:black;
+}
+
+.header
+{
+  background: #fff;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top:0;
+  z-index: 100;
+}
+.header_menu 
+{
+  text-align: right;
+  margin-left: auto;
+ 
+}
+.header_menu ul
+{
+  list-style: none;
+  height: 100%;
+  font-size: 0;
+}
+.header_menu ul>li
+{
+  display: inline-block;
+  
+}
+.header ul li a:hover
+{
+  background-color: #222;
+  color: white;
+}
+.header_menu ul li a
+{
+  vertical-align: middle;
+  padding: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 80px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+
+/* meida css start */
+@media screen and (max-width: 800px)
+{
+    .wrap
+    {
+      display: block;
+    }
+    #svg2600
+    {
+      width: 100%;
+    }
+    .wheater_tw
+    {
+      width: 100%;
+      font-size: 20px;
+    }
+    #weather_news
+    {
+      display: block;
+    }
+    #weather_newsright
+    {
+     width: 100%;
+     margin: 0;
+    }
+    .week_place
+    {
+      font-size: 50px !important;
+      padding: 20px 0;
+    }
+    .wheather_week
+    {
+      width: 100% !important;
+    }
+    .weekwrap
+    {
+      display: block !important;
+    }
+    .week_content ul li:nth-child(1)
+    {
+        width: 100% !important;
+    }
+    .week_content ul li
+    {
+      display: inline-flex !important;
+      width: 50% !important;
+      flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+  
+    }
+   
+}
